@@ -55,9 +55,9 @@ Measure similarity to each language using cosine similarity.
 
 Predict the language with the highest similarity score.
 
-This is a fully transparent and interpretable approach.
+Fully transparent and interpretable.
 
-# Evaluation & Visualizations
+# Evaluation & Visuals
 
 The notebook outputs:
 
@@ -66,3 +66,7 @@ A confusion matrix showing how accurately each language is identified.
 A cosine-similarity matrix showing how similar the language fingerprints are.
 
 These reveal natural clusters (e.g., Spanish/Galician, English/Dutch) and strong separation between languages with different writing systems.
+
+- Interpretation of similarity matrix: Spanish, Galician, Portuguese, and French form a loose Romance cluster with noticeably higher mutual similarity than with other languages. English and Dutch form a smaller Germanic cluster, while Esperanto sits in between major groups with moderate similarity to most Latin-script languages. Marathi and Russian stand alone as isolated singletons because their scripts share no n-gram structure with the Latin-based languages.
+
+- Interpretation of confusiom matrix: Galician has more false negatives: the classifier frequently thinks a Galician sentence is Spanish or Portuguese because the shared letter patterns dominate the fingerprint.
